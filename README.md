@@ -1,31 +1,54 @@
-# @pipeworx/mcp-mhw
+# mcp-mhw
 
-MCP server for Monster Hunter World game data via [mhw-db.com](https://mhw-db.com/). Free, no authentication required.
+MHW MCP — Monster Hunter World data (mhw-db.com, free, no auth)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `get_monsters` | List monsters with type, species, elements, ailments, and weaknesses |
-| `get_weapons` | List weapons, optionally filtered by weapon type |
-| `get_armor` | List armor pieces with type, rank, defense, resistances, and slots |
-| `get_skills` | List skills with descriptions and rank-level details |
 
-## Quickstart via Pipeworx Gateway
+## Quick Start
 
-```bash
-curl -X POST https://gateway.pipeworx.io/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "tools/call",
-    "params": {
-      "name": "mhw__get_monsters",
-      "arguments": { "limit": 5 }
-    },
-    "id": 1
-  }'
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
+
+```json
+{
+  "mcpServers": {
+    "mhw": {
+      "url": "https://gateway.pipeworx.io/mhw/mcp"
+    }
+  }
+}
 ```
+
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
+
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
+```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Mhw data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
