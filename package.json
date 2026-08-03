@@ -1,18 +1,20 @@
 {
   "name": "@pipeworx/mcp-mhw",
-  "version": "0.1.0",
-  "description": "MCP server for Monster Hunter World game data via mhw-db.com",
+  "version": "0.1.3",
+  "description": "MHW MCP — Monster Hunter World data (mhw-db.com, free, no auth)",
+  "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
-  "files": ["src"],
-  "scripts": {
-    "build": "tsc",
-    "check": "tsc --noEmit"
-  },
-  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "mhw", "monster-hunter", "gaming"],
-  "author": "Pipeworx",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "mhw"],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-mhw"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.7.0"
   }
 }
