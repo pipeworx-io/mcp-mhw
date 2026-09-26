@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/mhw",
   "title": "Mhw",
   "description": "MHW MCP — Monster Hunter World data (mhw-db.com, free, no auth)",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "websiteUrl": "https://pipeworx.io/packs/mhw",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-mhw",
