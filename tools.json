@@ -1,0 +1,70 @@
+[
+  {
+    "name": "get_monsters",
+    "description": "Search Monster Hunter World monsters by name, species, or size class. Returns species classification, elements, ailments, and weaknesses to plan hunts.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Filter by monster name (case-insensitive substring), e.g. \"nergigante\"."
+        },
+        "species": {
+          "type": "string",
+          "description": "Filter by species. One of: elder dragon, flying wyvern, brute wyvern, bird wyvern, fanged wyvern, piscine wyvern, fanged beast, neopteron, herbivore, wingdrake, relict, fish."
+        },
+        "type": {
+          "type": "string",
+          "description": "Size class: \"large\" (hunt targets) or \"small\" (ambient wildlife)."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Maximum number of monsters to return. Defaults to 20."
+        }
+      }
+    }
+  },
+  {
+    "name": "get_weapons",
+    "description": "Browse Monster Hunter World weapons by type (e.g., 'Great Sword', 'Bow', 'Hammer'). Returns damage, elements, and rarity to match your playstyle.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Filter by weapon type. One of: great-sword, sword-and-shield, dual-blades, long-sword, hammer, hunting-horn, lance, gunlance, switch-axe, charge-blade, insect-glaive, light-bowgun, heavy-bowgun, bow. Omit to return all types."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Maximum number of weapons to return. Defaults to 20."
+        }
+      }
+    }
+  },
+  {
+    "name": "get_armor",
+    "description": "Find Monster Hunter World armor by rank and type. Returns defense, elemental resistances, and skill slots for building effective sets.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "number",
+          "description": "Maximum number of armor pieces to return. Defaults to 20."
+        }
+      }
+    }
+  },
+  {
+    "name": "get_skills",
+    "description": "Look up Monster Hunter World skills by name. Returns descriptions, max ranks, and level-by-level effects to optimize your build.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "number",
+          "description": "Maximum number of skills to return. Defaults to 20."
+        }
+      }
+    }
+  }
+]
