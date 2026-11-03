@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-mhw",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "MHW MCP — Monster Hunter World data (mhw-db.com, free, no auth)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "mhw",
     "gatewaySlug": "mhw",
-    "sourceHash": "v1-057e3db06960686bcfd11f11dbbae156277502fd7ad2523c849db73d12f6a2ce",
-    "sourceCommit": "5c89d6abb778d45da5d92002eb251978622bedf9"
+    "sourceHash": "v1-7ca974cb3b978e0e141b93433fd2746327556f38423f38343ab8b46a10759945",
+    "sourceCommit": "56cf550e46fed96c0101a3877ccaf8357eecf016"
   }
 }
